@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Точки на карте</title>
+  <link rel="stylesheet" href="build/css/style.css">
+</head>
+
+<body>
+  <div class="main">
+    <!-- Левая часть интерфейса, заканчивается на уровне карты. Она делится на верх, с индикаторами состояния, и нижнюю часть с самой картой -->
+    <div class="left">
+      <!-- Верхняя часть, с индикаторами состояния -->
+      <div class="top">
+        <div class="free-stand">
+          <input type="checkbox" id="free-stand">
+          <label for="free-stand">
+            <span>Свободно: 219</span>
+          </label>
+        </div>
+        <div class="busy-stand">
+          <input type="checkbox" id="busy-stand">
+          <label for="busy-stand">
+            <span>Занят: 12</span>
+          </label>
+        </div>
+        <div class="reserved-stand">
+          <input type="checkbox" id="reserved-stand">
+          <label for="reserved-stand">
+            <span>Резерв: 43</span>
+          </label>
+        </div>
+        <div class="filter-info">
+          <span>Все: 437</span>
+        </div>
+      </div>
+      <!-- Нижняя часть с картой -->
+      <div class="map">
+        <iframe src="https://yandex.ru/map-widget/v1/-/CGqGAeC" width="" height="" frameborder="1"
+          allowfullscreen="true"></iframe>
+      </div>
+    </div>
+    <!-- Правая часть, с поиском, списком и меню, она делится на две части, верхнюю и нижнюю -->
+    <div class="right">
+      <!-- Верхняя часть, делится на поиск и на иконку аватара, скорей всего раздел профиля пользователя -->
+      <div class="top">
+        <div class="search-field">
+          <div class="top">
+            <input type="text" placeholder="Поиск объектов на карте...">
+            <a href="#"><img src="build/img/search-icon.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="top">
+            <a href="profile.html">
+              <img src="build/img/avatar.jpg" alt="" class="avatar">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Нижняя часть, делится на список и меню -->
+      <div class="info">
+
+
+
+        <div class="info-wrapper">
+
+
+
+
+          <div class="filter">
+
+            <div class="period-year">
+              <span class="close-filter"></span>
+              <label for="period-year-one">Период размещения (год):</label>
+              <div class="period-year-input-wrapper">
+                <label for="">
+                  <input type="number" id="period-year-one" placeholder="2019" value="">
+                </label>
+                <label for="">
+                  <input type="number" placeholder="2020" value="">
+                </label>
+              </div>
+            </div>
+
+            <div class="period-month">
+              <label class="period-month-title" for="period-month">Период размещения (месяц):</label>
+              <div class="period-month-input-wrapper">
+                <div class="period-month-left">
+                  <div class="period-month-item">
+                    <input type="checkbox" id="april">
+                    <label for="april">Апрель</label>
+                  </div>
+                  <div class="period-month-item">
+                    <input type="checkbox" id="may">
+                    <label for="may">Май</label>
+                  </div>
+                  <div class="period-month-item">
+                    <input type="checkbox" id="june">
+                    <label for="june">Июнь</label>
+                  </div>
+                  <div class="period-month-item">
+                    <input type="checkbox" id="july">
+                    <label for="july">Июль</label>
+                  </div>
+                  <div class="period-month-item">
+                    <input type="checkbox" id="august">
+                    <label for="august">Август</label>
+                  </div>
+                  <div class="period-month-item">
+                    <input type="checkbox" id="september">
+                    <label for="september">Сентябрь</label>
+                  </div>
+                </div>
+                <div class="period-month-right">
+                  <div class="period-month-item">
+                    <input type="checkbox" id="october">
+                    <label for="october">Октябрь</label>
+                  </div>
+                  <div class="period-month-item">
+                    <input type="checkbox" id="november">
+                    <label for="november">Ноябрь</label>
+                  </div>
+                  <div class="period-month-item">
+                    <input type="checkbox" id="december">
+                    <label for="december">Декабрь</label>
+                  </div>
+                  <div class="period-month-item">
+                    <input type="checkbox" id="january">
+                    <label for="january">Январь</label>
+                  </div>
+                  <div class="period-month-item">
+                    <input type="checkbox" id="february">
+                    <label for="february">Февраль</label>
+                  </div>
+                  <div class="period-month-item">
+                    <input type="checkbox" id="march">
+                    <label for="march">Март</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="price">
+              <label for="price-one">Цена:</label>
+              <div class="price-input-wrapper">
+                <label for="">
+                  <input type="number" id="price-one" placeholder="28 000">
+                </label>
+                <label for="">
+                  <input type="number" placeholder="134 000">
+                </label>
+              </div>
+            </div>
+
+            <div class="direction">
+              <label for="">Направление:</label>
+              <select>
+                <option>Все</option>
+              </select>
+            </div>
+
+            <div class="construction">
+              <label for="">Тип конструкции:</label>
+              <select>
+                <option>Все</option>
+              </select>
+            </div>
+
+            <div class="side">
+              <label for="">Сторона:</label>
+              <select>
+                <option>Все</option>
+              </select>
+            </div>
+
+            <div class="district">
+              <label for="">Административный округ:</label>
+              <select>
+                <option>Все</option>
+              </select>
+            </div>
+
+            <div class="search-gid">
+              <label for="">Поиск по GID:</label>
+              <select>
+                <option>Все</option>
+              </select>
+            </div>
+
+            <div class="search-address">
+              <label for="">Поиск по адресу:</label>
+              <select>
+                <option>Все</option>
+              </select>
+            </div>
+
+            <div class="search-action">
+              <label for="">Поиск по акции:</label>
+              <select>
+                <option>Все</option>
+              </select>
+            </div>
+
+            <div class="free-and-light">
+              <div class="free-input-wrapper">
+                <input type="checkbox" id="free">
+                <label for="free">Только свободные</label>
+              </div>
+              <div class="light-input-wrapper">
+                <input type="checkbox" id="light">
+                <label for="light">С подсветкой</label>
+              </div>
+            </div>
+
+            <div class="send-buttons">
+              <button>Очистить фильтр</button>
+              <button>Показать (418)</button>
+            </div>
+
+          </div>
+
+
+
+
+
+
+          <div class="list">
+            <!-- Это элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-busy"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-reserved"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-busy"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-busy"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-reserved"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+
+          </div>
+
+          <div class="import-buttons">
+            <a href="#" class="add-button">Добавить</a>
+            <a href="#" class="import-button">Импорт</a>
+          </div>
+        </div>
+
+
+
+
+        <!-- Раздел меню -->
+        <div class="menu">
+          <nav>
+            <ul>
+              <li class="notification-item">
+                <a href="notification.html" class="menu-item">
+                  <img src="build/img/notification.svg" alt="">
+                  <span class="notification-indicator"></span>
+                </a>
+              </li>
+              <li class="map-item">
+                <a href="index.html" class="">
+                  <img src="build/img/map.svg" alt="">
+                </a>
+              </li>
+              <li class="filter-item">
+                <a href="filter.html" class="">
+                  <img src="build/img/filter.svg" alt="">
+                </a>
+              </li>
+              <li class="pdf-item">
+                <a href="pdf.html" class="menu-item">
+                  <img src="build/img/pdf.svg" alt="">
+                </a>
+              </li>
+              <li class="basket-item">
+                <a href="#" class="basket-button">
+                  <img src="build/img/basket-icon.svg" alt="">
+                </a>
+              </li>
+              <li class="collection-item">
+                <a href="#" class="collection-button">
+                  <img src="build/img/collection-icon.svg" alt="">
+                </a>
+              </li>
+              <!-- <li class="dot-item">
+                <a href="dot.html" class="avatar-link">
+                  <img src="build/img/stand-avatar.png" alt="" class="avatar">
+                </a>
+              </li> -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="popup-window hide">
+    <a class="close-icon"><img src="build/img/close-icon.svg" alt=""></a>
+    <div class="main">
+      <!-- Левая часть интерфейса, заканчивается на уровне карты. Она делится на верх, с индикаторами состояния, и нижнюю часть с самой картой -->
+      <div class="left">
+        <!-- Верхняя часть, с индикаторами состояния -->
+
+        <!-- Нижняя часть с картой -->
+        <div class="images images-popup">
+          <div class="large-image">
+            <img src="build/img/stand-avatar.png" alt="" name="largeIMG">
+          </div>
+          <div class="small-image">
+            <div class="small-image-item">
+              <a href="javascript:l_image ('build/img/stand-avatar.png')">
+                <img src="build/img/stand-avatar.png" alt="">
+              </a>
+            </div>
+            <div class="small-image-item">
+              <a href="javascript:l_image ('build/img/tatoine.jpg')">
+                <img src="build/img/tatoine.jpg" alt="">
+              </a>
+            </div>
+            <div class="small-image-item">
+              <a href="javascript:l_image ('build/img/hoth.jpg')">
+                <img src="build/img/hoth.jpg" alt="">
+              </a>
+            </div>
+            <div class="small-image-item">
+              <a href="javascript:l_image ('build/img/tatoine.jpg')">
+                <img src="build/img/tatoine.jpg" alt="">
+              </a>
+            </div>
+            <div class="small-image-item">
+              <a href="javascript:l_image ('build/img/hoth.jpg')">
+                <img src="build/img/hoth.jpg" alt="">
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Правая часть, с поиском, списком и меню, она делится на две части, верхнюю и нижнюю -->
+      <div class="right">
+        <!-- Верхняя часть, делится на поиск и на иконку аватара, скорей всего раздел профиля пользователя -->
+        <div class="top">
+
+
+        </div>
+        <!-- Нижняя часть, делится на список и меню -->
+        <div class="info info-popup">
+          <div class="information">
+
+            <h2>KP09, пр-кт Юности, 1а (универмаг Юность), A </h2>
+            <p class="information-price">15000 руб./мес.</p>
+            <p class="construction-data">Данные конструкции: </p>
+            <ul class="description-list">
+              <li>Тип конструкции:</li>
+              <li>Биллборд</li>
+            </ul>
+            <ul class="description-list">
+              <li>Формат:</li>
+              <li>6 х 3 м</li>
+            </ul>
+            <ul class="description-list">
+              <li>Направление:</li>
+              <li></li>
+            </ul>
+            <ul class="description-list">
+              <li>Освещение:</li>
+              <li>Да</li>
+            </ul>
+            <ul class="description-list">
+              <li>GID:</li>
+              <li>КР109</li>
+            </ul>
+            <ul class="description-list">
+              <li>Технические требования:</li>
+              <li></li>
+            </ul>
+
+            <button class="download-button">Скачать</button>
+
+            <p class="busy-title">Занятость:</p>
+            <ul class="busy-list">
+              <li class="free-item">Свободно: 219</li>
+              <li class="busy-item">Занят: 12</li>
+              <li class="reserved-item">Резерв: 43</li>
+            </ul>
+
+            <div class="months-indicators">
+              <ul>
+                <li class="indicator-reserved">Янв</li>
+                <li class="indicator-reserved">Фев</li>
+                <li class="indicator-reserved">Мар</li>
+                <li class="indicator-free">Апр</li>
+                <li class="indicator-free">Май</li>
+                <li class="indicator-free">Июн</li>
+                <li class="indicator-free">Июл</li>
+                <li class="indicator-free">Авг</li>
+                <li class="indicator-free">Сен</li>
+                <li class="indicator-free">Окт</li>
+                <li class="indicator-free">Ноя</li>
+                <li class="indicator-free">Дек</li>
+              </ul>
+            </div>
+
+            <button class="pdf-add">Добавить в PDF КП</button>
+
+          </div>
+          <!-- Раздел меню -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="import-popup-window hide">
+    <a class="close-icon"><img src="build/img/close-icon.svg" alt=""></a>
+    <div class="importForm">
+      <form name="shop_item_import" method="post" action="/import" enctype="multipart/form-data">
+        <div class="my-custom-class-for-errors"></div>
+        <div class="row">
+          <div class="col">
+            <div class="import-file-wrapper">
+              <label for="shop_item_import_file" class="required">Загрузить файл</label>
+              <input type="file" id="shop_item_import_file" name="shop_item_import[file]" required="required">
+            </div>
+          </div>
+        </div>
+        <div class="import-button-wrapper">
+          <button type="submit" id="shop_item_import_save" name="shop_item_import[save]">Импорт</button>
+        </div>
+        <input type="hidden" id="shop_item_import__token" name="shop_item_import[_token]"
+          value="v_MmEVGvfk8ZTrXA8DRMlJIuiUsugMkH9eRU7a_j3ZM">
+      </form>
+    </div>
+  </div>
+
+  <div class="add-popup-window hide">
+    <a class="close-icon"><img src="build/img/close-icon.svg" alt=""></a>
+
+
+
+
+
+
+
+    <div class="main">
+
+      <div class="lef-popupt">
+
+        <div class="map-popup">
+          <iframe src="https://yandex.ru/map-widget/v1/-/CGqGAeC" width="" height="" frameborder="1"
+            allowfullscreen="true"></iframe>
+        </div>
+      </div>
+
+      <div class="right-popup">
+
+        <div class="info">
+
+          <div class="info-wrapper">
+
+            <div class="add-list">
+
+
+              <div class="list-wrapper">
+                <label for="">Наименование<sup>*</sup></label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Тип</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Город</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Адрес</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Район</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Номер конструкции</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Широта</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Долгота</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+
+              <div class="list-wrapper">
+                <label for="">Размер</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Сторона</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Статус<sup>*</sup></label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Статус до</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper check-list">
+                <div class="">
+                  <label for="">
+                    <input type="checkbox" id="" placeholder="" value="">
+                  </label>
+                </div>
+                <label for="" class="check-list-title">С подсветкой</label>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Цена(24ч)</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Цена(месяц)</label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="text" id="" placeholder="Иванов" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <label for="">Загрузите фотографии<sup>*</sup></label>
+                <div class="list-item-wrapper">
+                  <label for="">
+                    <input type="file" id="" placeholder="" value="">
+                  </label>
+                </div>
+              </div>
+
+              <div class="list-wrapper">
+                <input type="button" value="Добавить" class="list-wrapper-send-button">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="collection-popup hide">
+    <a class="close-icon"><img src="build/img/close-icon.svg" alt=""></a>
+
+    <div class="main-popup">
+      <div class="right">
+        <div class="info-popup">
+
+          <div class="info-collection">
+            <div class="collection-button-wrapper">
+
+              <a href="#" class="notification-info-button-1">
+                <div class="collection-title-wrapper">
+                  <p>К101007</p>
+                  <p>29 ноября 2019 года</p>
+                  <img src="build/img/open-list-icon.png" alt="">
+                </div>
+              </a>
+
+              <span class="devider-popup"></span>
+
+              <div class="collection-text" id="notification-text-1" style="display: none">
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-busy"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-busy"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+            <span class="notification-close-icon"></span>
+          </div>
+
+
+          <div class="info-collection">
+            <div class="collection-button-wrapper">
+
+              <a href="#" class="notification-info-button-1">
+                <div class="collection-title-wrapper">
+                  <p>К101007</p>
+                  <p>29 ноября 2019 года</p>
+                  <img src="build/img/open-list-icon.png" alt="">
+                </div>
+              </a>
+
+              <span class="devider-popup"></span>
+
+              <div class="collection-text" id="notification-text-1" style="display: none">
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+            <span class="notification-close-icon"></span>
+          </div>
+
+          <div class="info-collection">
+            <div class="collection-button-wrapper">
+
+              <a href="#" class="notification-info-button-1">
+                <div class="collection-title-wrapper">
+                  <p>К101007</p>
+                  <p>29 ноября 2019 года</p>
+                  <img src="build/img/open-list-icon.png" alt="">
+                </div>
+              </a>
+
+              <span class="devider-popup"></span>
+
+              <div class="collection-text" id="notification-text-1" style="display: none">
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+            <span class="notification-close-icon"></span>
+          </div>
+
+          <div class="info-collection">
+            <div class="collection-button-wrapper">
+
+              <a href="#" class="notification-info-button-1">
+                <div class="collection-title-wrapper">
+                  <p>К101007</p>
+                  <p>29 ноября 2019 года</p>
+                  <img src="build/img/open-list-icon.png" alt="">
+                </div>
+              </a>
+
+              <span class="devider-popup"></span>
+
+              <div class="collection-text" id="notification-text-1" style="display: none">
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
+                <div class="list-item list-item-popup">
+                  <div class="list-item-one">
+                    <ul>
+                      <li><span>КР109</span></li>
+                      <li>
+                        <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                      </li>
+                      <li><span class="indicator-free"></span></li>
+                      <li><span><b>14 000 Р</b></span></li>
+                    </ul>
+                  </div>
+                  <span class="devider"></span>
+                  <div class="list-item-two">
+                    <ul>
+                      <li><span>Формат: <b>6 х 3 м</b></span></li>
+                      <li><span>Сторона: <b>А</b></span></li>
+                      <li><span>Свет: <b>Да</b></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="notification-close-icon"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="basket-popup hide">
+    <a class="close-icon"><img src="build/img/close-icon.svg" alt=""></a>
+
+    <div class="left-basket">
+        <div class="list">
+            <!-- Это элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-busy"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-reserved"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-busy"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-busy"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-reserved"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+            <!-- Новый элемент списка -->
+            <div class="list-item list-item-basket">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+              <a href="#" class="more-info-button">Подробнее</a>
+            </div>
+
+          </div>
+      </div>
+
+      <div class="right-basket">
+
+        <a href="#">Сохранить PDF  КП</a>
+
+      </div>
+
+  </div>
+
+  <script src="build/js/script.js"></script>
+  <script>
+    $('.filter-item').click(function (event) {
+      event.preventDefault();
+      $('.filter').addClass('filter-show');
+      $('.list').addClass('filter-shadow');
+      $('.import-buttons').addClass('filter-shadow');
+      $('.filter').removeClass('filter-hide');
+      $('.list').removeClass('filter-shadow-hide');
+      $('.import-buttons').removeClass('filter-shadow-hide');
+    });
+
+    $('.close-filter').click(function () {
+      $('.filter').addClass('filter-hide');
+      $('.list').removeClass('filter-shadow');
+      $('.list').addClass('filter-shadow-hide');
+      $('.list').removeClass('filter-show');
+      $('.import-buttons').removeClass('filter-shadow');
+      $('.list').addClass('filter-shadow-hide');
+      $('.import-buttons').addClass('filter-shadow-hide');
+    });
+
+    $('.more-info-button').click(function (event) {
+      event.preventDefault();
+      $('.popup-window').removeClass('hide');
+      $('.map, .list, .menu, .top').addClass('disabled');
+    });
+
+    $('.close-icon').click(function (event) {
+      event.preventDefault();
+      $('.popup-window').addClass('hide');
+      $('.map, .list, .menu, .top').removeClass('disabled');
+    });
+
+    $('.import-button').click(function (event) {
+      event.preventDefault();
+      $('.import-popup-window').removeClass('hide');
+      $('.map, .list, .menu, .top').addClass('disabled');
+    });
+
+    $('.close-icon').click(function (event) {
+      event.preventDefault();
+      $('.import-popup-window').addClass('hide');
+      $('.map, .list, .menu, .top').removeClass('disabled');
+    });
+
+    $('.add-button').click(function (event) {
+      event.preventDefault();
+      $('.add-popup-window').removeClass('hide');
+      $('.map, .list, .menu, .top').addClass('disabled');
+    });
+
+    $('.close-icon').click(function (event) {
+      event.preventDefault();
+      $('.add-popup-window').addClass('hide');
+      $('.map, .list, .menu, .top').removeClass('disabled');
+    });
+
+    $('.collection-button').click(function (event) {
+      event.preventDefault();
+      $('.collection-popup').removeClass('hide');
+      $('.map, .list, .menu, .top').addClass('disabled');
+    });
+
+    $('.close-icon').click(function (event) {
+      event.preventDefault();
+      $('.collection-popup').addClass('hide');
+      $('.map, .list, .menu, .top').removeClass('disabled');
+    });
+
+    $('.basket-button').click(function (event) {
+      event.preventDefault();
+      $('.basket-popup').removeClass('hide');
+      $('.map, .list, .menu, .top').addClass('disabled');
+    });
+
+    $('.close-icon').click(function (event) {
+      event.preventDefault();
+      $('.basket-popup').addClass('hide');
+      $('.map, .list, .menu, .top').removeClass('disabled');
+    });
+
+  </script>
+  <script>
+    function l_image(a) {
+      document.largeIMG.src = a
+    }
+
+  </script>
+  <script>
+    $('.filter-item').click(function (event) {
+      event.preventDefault();
+      $('.filter').addClass('filter-show');
+      $('.list').addClass('filter-shadow');
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Выбранные точки для PDF</title>
+  <link rel="stylesheet" href="build/css/style.css">
+</head>
+
+<body>
+  <div class="main">
+    <!-- Левая часть интерфейса, заканчивается на уровне карты. Она делится на верх, с индикаторами состояния, и нижнюю часть с самой картой -->
+    <div class="left">
+      <!-- Верхняя часть, с индикаторами состояния -->
+      <div class="top">
+        <div class="free-stand">
+          <input type="checkbox" id="free-stand">
+          <label for="free-stand">
+            <span>Свободно: 219</span>
+          </label>
+        </div>
+        <div class="busy-stand">
+          <input type="checkbox" id="busy-stand">
+          <label for="busy-stand">
+            <span>Занят: 12</span>
+          </label>
+        </div>
+        <div class="reserved-stand">
+          <input type="checkbox" id="reserved-stand">
+          <label for="reserved-stand">
+            <span>Резерв: 43</span>
+          </label>
+        </div>
+        <div class="filter-info">
+          <span>Все: 437</span>
+        </div>
+      </div>
+      <!-- Нижняя часть с картой -->
+      <div class="map">
+        <iframe src="https://yandex.ru/map-widget/v1/-/CGqGAeC" width="" height="" frameborder="1"
+          allowfullscreen="true"></iframe>
+      </div>
+    </div>
+    <!-- Правая часть, с поиском, списком и меню, она делится на две части, верхнюю и нижнюю -->
+    <div class="right">
+      <!-- Верхняя часть, делится на поиск и на иконку аватара, скорей всего раздел профиля пользователя -->
+      <div class="top">
+        <div class="search-field">
+          <div class="top">
+            <input type="text" placeholder="Поиск объектов на карте...">
+            <a href="#"><img src="build/img/search-icon.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="top">
+            <a href="profile.html">
+              <img src="build/img/avatar.jpg" alt="" class="avatar">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Нижняя часть, делится на список и меню -->
+      <div class="info">
+        <div class="pdf">
+          <!-- Это элемент списка -->
+          <div class="pdf-wrapper">
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="checklist">
+              <input type="checkbox">
+            </div>
+          </div>
+          <!-- Новый элемент списка -->
+          <div class="pdf-wrapper">
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-busy"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="checklist">
+              <input type="checkbox">
+            </div>
+          </div>
+          <!-- Новый элемент списка -->
+          <div class="pdf-wrapper">
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-reserved"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="checklist">
+              <input type="checkbox">
+            </div>
+          </div>
+          <!-- Новый элемент списка -->
+          <div class="pdf-wrapper">
+            <div class="list-item">
+              <div class="list-item-one">
+                <ul>
+                  <li><span>КР109</span></li>
+                  <li>
+                    <p>пр-кт Юности, 48 - ул. Бруснева (светофор)</p>
+                  </li>
+                  <li><span class="indicator-free"></span></li>
+                  <li><span><b>14 000 Р</b></span></li>
+                </ul>
+              </div>
+              <span class="devider"></span>
+              <div class="list-item-two">
+                <ul>
+                  <li><span>Формат: <b>6 х 3 м</b></span></li>
+                  <li><span>Сторона: <b>А</b></span></li>
+                  <li><span>Свет: <b>Да</b></span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="checklist">
+              <input type="checkbox">
+            </div>
+          </div>
+          <div class="save-pdf-wrapper">
+            <button class="save-pdf-button">Сохранить PDF КП</button>
+          </div>
+        </div>
+        <!-- Раздел меню -->
+        <div class="menu">
+          <nav>
+            <ul>
+              <li class="notification-item">
+                <a href="notification.html" class="menu-item">
+                  <img src="build/img/notification.svg" alt="">
+                  <span class="notification-indicator"></span>
+                </a>
+              </li>
+              <li class="map-item">
+                <a href="index.html" class="">
+                  <img src="build/img/map.svg" alt="">
+                </a>
+              </li>
+              <li class="filter-item">
+                <a href="filter.html" class="">
+                  <img src="build/img/filter.svg" alt="">
+                </a>
+              </li>
+              <li class="pdf-item">
+                <a href="pdf.html" class="menu-item">
+                  <img src="build/img/pdf.svg" alt="">
+                </a>
+              </li>
+              <li class="dot-item">
+                <a href="dot.html" class="avatar-link">
+                  <img src="build/img/stand-avatar.png" alt="" class="avatar">
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="build/js/script.js"></script>
+  <script>
+      $('.filter-item').click(function (event) {
+        event.preventDefault();
+        $('.filter').addClass('filter-show');
+        $('.list').addClass('filter-shadow');
+      });
+
+    </script>
+</body>
+
+</html>

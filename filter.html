@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Сортировка</title>
+  <link rel="stylesheet" href="build/css/style.css">
+  <link rel="stylesheet" href="src/libs/jScrollPane/style/jquery.jscrollpane.css">
+</head>
+
+<body>
+  <div class="main">
+    <!-- Левая часть интерфейса, заканчивается на уровне карты. Она делится на верх, с индикаторами состояния, и нижнюю часть с самой картой -->
+    <div class="left">
+      <!-- Верхняя часть, с индикаторами состояния -->
+      <div class="top">
+        <div class="free-stand">
+          <input type="checkbox" id="free-stand">
+          <label for="free-stand">
+            <span>Свободно: 219</span>
+          </label>
+        </div>
+        <div class="busy-stand">
+          <input type="checkbox" id="busy-stand">
+          <label for="busy-stand">
+            <span>Занят: 12</span>
+          </label>
+        </div>
+        <div class="reserved-stand">
+          <input type="checkbox" id="reserved-stand">
+          <label for="reserved-stand">
+            <span>Резерв: 43</span>
+          </label>
+        </div>
+        <div class="filter-info">
+          <span>Все: 437</span>
+        </div>
+      </div>
+      <!-- Нижняя часть с картой -->
+      <div class="map">
+        <iframe src="https://yandex.ru/map-widget/v1/-/CGqGAeC" width="" height="" frameborder="1"
+          allowfullscreen="true"></iframe>
+      </div>
+    </div>
+    <!-- Правая часть, с поиском, списком и меню, она делится на две части, верхнюю и нижнюю -->
+    <div class="right">
+      <!-- Верхняя часть, делится на поиск и на иконку аватара, скорей всего раздел профиля пользователя -->
+      <div class="top">
+        <div class="search-field">
+          <div class="top">
+            <input type="text" placeholder="Поиск объектов на карте...">
+            <a href="#"><img src="build/img/search-icon.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="top">
+            <a href="profile.html">
+              <img src="build/img/avatar.jpg" alt="" class="avatar">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Нижняя часть, делится на список и меню -->
+      <div class="info">
+        <div class="filter">
+
+          <div class="period-year">
+            <label for="period-year-one">Период размещения (год):</label>
+            <div class="period-year-input-wrapper">
+              <label for="">
+                <input type="number" id="period-year-one" placeholder="2019" value="">
+              </label>
+              <label for="">
+                <input type="number" placeholder="2020" value="">
+              </label>
+            </div>
+          </div>
+
+          <div class="period-month">
+            <label class="period-month-title" for="period-month">Период размещения (месяц):</label>
+            <div class="period-month-input-wrapper">
+              <div class="period-month-left">
+                <div class="period-month-item">
+                  <input type="checkbox" id="april">
+                  <label for="april">Апрель</label>
+                </div>
+                <div class="period-month-item">
+                  <input type="checkbox" id="may">
+                  <label for="may">Май</label>
+                </div>
+                <div class="period-month-item">
+                  <input type="checkbox" id="june">
+                  <label for="june">Июнь</label>
+                </div>
+                <div class="period-month-item">
+                  <input type="checkbox" id="july">
+                  <label for="july">Июль</label>
+                </div>
+                <div class="period-month-item">
+                  <input type="checkbox" id="august">
+                  <label for="august">Август</label>
+                </div>
+                <div class="period-month-item">
+                  <input type="checkbox" id="september">
+                  <label for="september">Сентябрь</label>
+                </div>
+              </div>
+              <div class="period-month-right">
+                <div class="period-month-item">
+                  <input type="checkbox" id="october">
+                  <label for="october">Октябрь</label>
+                </div>
+                <div class="period-month-item">
+                  <input type="checkbox" id="november">
+                  <label for="november">Ноябрь</label>
+                </div>
+                <div class="period-month-item">
+                  <input type="checkbox" id="december">
+                  <label for="december">Декабрь</label>
+                </div>
+                <div class="period-month-item">
+                  <input type="checkbox" id="january">
+                  <label for="january">Январь</label>
+                </div>
+                <div class="period-month-item">
+                  <input type="checkbox" id="february">
+                  <label for="february">Февраль</label>
+                </div>
+                <div class="period-month-item">
+                  <input type="checkbox" id="march">
+                  <label for="march">Март</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="price">
+            <label for="price-one">Цена:</label>
+            <div class="price-input-wrapper">
+              <label for="">
+                <input type="number" id="price-one" placeholder="28 000">
+              </label>
+              <label for="">
+                <input type="number" placeholder="134 000">
+              </label>
+            </div>
+          </div>
+
+          <div class="direction">
+            <label for="">Направление:</label>
+            <select>
+              <option>Все</option>
+            </select>
+          </div>
+
+          <div class="construction">
+            <label for="">Тип конструкции:</label>
+            <select>
+              <option>Все</option>
+            </select>
+          </div>
+
+          <div class="side">
+            <label for="">Сторона:</label>
+            <select>
+              <option>Все</option>
+            </select>
+          </div>
+
+          <div class="district">
+            <label for="">Административный округ:</label>
+            <select>
+              <option>Все</option>
+            </select>
+          </div>
+
+          <div class="search-gid">
+            <label for="">Поиск по GID:</label>
+            <select>
+              <option>Все</option>
+            </select>
+          </div>
+
+          <div class="search-address">
+            <label for="">Поиск по адресу:</label>
+            <select>
+              <option>Все</option>
+            </select>
+          </div>
+
+          <div class="search-action">
+            <label for="">Поиск по акции:</label>
+            <select>
+              <option>Все</option>
+            </select>
+          </div>
+
+          <div class="free-and-light">
+            <div class="free-input-wrapper">
+              <input type="checkbox" id="free">
+              <label for="free">Только свободные</label>
+            </div>
+            <div class="light-input-wrapper">
+              <input type="checkbox" id="light">
+              <label for="light">С подсветкой</label>
+            </div>
+          </div>
+
+          <div class="send-buttons">
+            <button>Очистить фильтр</button>
+            <button>Показать (418)</button>
+          </div>
+
+        </div>
+        <!-- Раздел меню -->
+        <div class="menu">
+          <nav>
+            <ul>
+              <li class="notification-item">
+                <a href="notification.html" class="menu-item">
+                  <img src="build/img/notification.svg" alt="">
+                  <span class="notification-indicator"></span>
+                </a>
+              </li>
+              <li class="map-item">
+                <a href="index.html" class="">
+                  <img src="build/img/map.svg" alt="">
+                </a>
+              </li>
+              <li class="filter-item">
+                <a href="filter.html" class="">
+                  <img src="build/img/filter.svg" alt="">
+                </a>
+              </li>
+              <li class="pdf-item">
+                <a href="pdf.html" class="menu-item">
+                  <img src="build/img/pdf.svg" alt="">
+                </a>
+              </li>
+              <li class="dot-item">
+                <a href="dot.html" class="avatar-link">
+                  <img src="build/img/stand-avatar.png" alt="" class="avatar">
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="build/js/script.js"></script>
+  <script>
+      $('.filter-item').click(function (event) {
+        event.preventDefault();
+        $('.filter').addClass('filter-show');
+        $('.list').addClass('filter-shadow');
+      });
+
+    </script>
+</body>
+
+</html>

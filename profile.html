@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Профиль</title>
+  <link rel="stylesheet" href="build/css/style.css">
+</head>
+
+<body>
+  <div class="main">
+    <!-- Левая часть интерфейса, заканчивается на уровне карты. Она делится на верх, с индикаторами состояния, и нижнюю часть с самой картой -->
+    <div class="left">
+      <!-- Верхняя часть, с индикаторами состояния -->
+      <div class="top">
+        <div class="free-stand">
+          <input type="checkbox" id="free-stand">
+          <label for="free-stand">
+            <span>Свободно: 219</span>
+          </label>
+        </div>
+        <div class="busy-stand">
+          <input type="checkbox" id="busy-stand">
+          <label for="busy-stand">
+            <span>Занят: 12</span>
+          </label>
+        </div>
+        <div class="reserved-stand">
+          <input type="checkbox" id="reserved-stand">
+          <label for="reserved-stand">
+            <span>Резерв: 43</span>
+          </label>
+        </div>
+        <div class="filter-info">
+          <span>Все: 437</span>
+        </div>
+      </div>
+      <!-- Нижняя часть с картой -->
+      <div class="map">
+        <iframe src="https://yandex.ru/map-widget/v1/-/CGqGAeC" width="" height="" frameborder="1"
+          allowfullscreen="true"></iframe>
+      </div>
+    </div>
+    <!-- Правая часть, с поиском, списком и меню, она делится на две части, верхнюю и нижнюю -->
+    <div class="right">
+      <!-- Верхняя часть, делится на поиск и на иконку аватара, скорей всего раздел профиля пользователя -->
+      <div class="top">
+        <div class="search-field">
+          <div class="top">
+            <input type="text" placeholder="Поиск объектов на карте...">
+            <a href="#"><img src="build/img/search-icon.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="top">
+            <a href="profile.html">
+              <img src="build/img/avatar.jpg" alt="" class="avatar">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Нижняя часть, делится на список и меню -->
+      <div class="info">
+        <div class="profile">
+          <!-- Это элемент списка -->
+          <div class="avatar-wrapper">
+            <img src="build/img/avatar.jpg" alt="">
+          </div>
+
+          <div class="avatar-download-wrapper">
+            <button class="avatar-download">Загрузить фото
+              <input type="file">
+            </button>
+          </div>
+
+          <div class="name-fields-wrapper">
+
+            <label for="">
+              <input type="text" placeholder="Иванов" disabled class="first-name">
+              <span class="first-name-edit"></span>
+            </label>
+
+            <label for="">
+              <input type="text" placeholder="Иван" disabled class="second-name">
+              <span class="second-name-edit"></span>
+            </label>
+
+            <label for="">
+              <input type="text" placeholder="Иванович" disabled class="third-name">
+              <span class="third-name-edit"></span>
+            </label>
+
+          </div>
+
+          <div class="phone-fields-wrapper">
+
+            <div class="first-field">
+
+              <label for="">
+                <input type="number" placeholder="+7 923 765 23 45" disabled class="first-contact">
+                <span class="first-contact-edit"></span>
+              </label>
+
+              <label for="">
+                <input type="text" placeholder="info_reklama@mail.ru" disabled class="second-contact">
+                <span class="second-contact-edit"></span>
+              </label>
+
+            </div>
+
+            <div class="second-field">
+
+              <label for="">
+                <input type="number" placeholder="+7 923 765 23 45" disabled class="third-contact">
+                <span class="third-contact-edit"></span>
+              </label>
+
+
+              <label for="">
+                <input type="number" placeholder="+7 987 231 12 09" disabled class="fourth-contact">
+                <span class="fourth-contact-edit"></span>
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+        <!-- Раздел меню -->
+        <div class="menu">
+          <nav>
+            <ul>
+              <li class="notification-item">
+                <a href="notification.html" class="menu-item">
+                  <img src="build/img/notification.svg" alt="">
+                  <span class="notification-indicator"></span>
+                </a>
+              </li>
+              <li class="map-item">
+                <a href="index.html" class="">
+                  <img src="build/img/map.svg" alt="">
+                </a>
+              </li>
+              <li class="filter-item">
+                <a href="filter.html" class="">
+                  <img src="build/img/filter.svg" alt="">
+                </a>
+              </li>
+              <li class="pdf-item">
+                <a href="pdf.html" class="menu-item">
+                  <img src="build/img/pdf.svg" alt="">
+                </a>
+              </li>
+              <li class="dot-item">
+                <a href="dot.html" class="avatar-link">
+                  <img src="build/img/stand-avatar.png" alt="" class="avatar">
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="build/js/script.js"></script>
+  <script>
+      $('.filter-item').click(function (event) {
+        event.preventDefault();
+        $('.filter').addClass('filter-show');
+        $('.list').addClass('filter-shadow');
+      });
+
+    </script>
+</body>
+
+</html>

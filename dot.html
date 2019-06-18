@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Выбранная точка</title>
+  <link rel="stylesheet" href="build/css/style.css">
+</head>
+
+<body>
+  <div class="main">
+    <!-- Левая часть интерфейса, заканчивается на уровне карты. Она делится на верх, с индикаторами состояния, и нижнюю часть с самой картой -->
+    <div class="left">
+      <!-- Верхняя часть, с индикаторами состояния -->
+      <div class="top">
+        <div class="free-stand">
+          <input type="checkbox" id="free-stand">
+          <label for="free-stand">
+            <span>Свободно: 219</span>
+          </label>
+        </div>
+        <div class="busy-stand">
+          <input type="checkbox" id="busy-stand">
+          <label for="busy-stand">
+            <span>Занят: 12</span>
+          </label>
+        </div>
+        <div class="reserved-stand">
+          <input type="checkbox" id="reserved-stand">
+          <label for="reserved-stand">
+            <span>Резерв: 43</span>
+          </label>
+        </div>
+        <div class="filter-info">
+          <span>Все: 437</span>
+        </div>
+      </div>
+      <!-- Нижняя часть с картой -->
+      <div class="images">
+        <div class="large-image">
+          <img src="build/img/stand-avatar.png" alt="" name="largeIMG">
+        </div>
+        <div class="small-image">
+          <div class="small-image-item">
+            <a href="javascript:l_image ('build/img/stand-avatar.png')">
+              <img src="build/img/stand-avatar.png" alt="">
+            </a>
+          </div>
+          <div class="small-image-item">
+            <a href="javascript:l_image ('build/img/tatoine.jpg')">
+              <img src="build/img/tatoine.jpg" alt="">
+            </a>
+          </div>
+          <div class="small-image-item">
+            <a href="javascript:l_image ('build/img/hoth.jpg')">
+              <img src="build/img/hoth.jpg" alt="">
+            </a>
+          </div>
+          <div class="small-image-item">
+            <a href="javascript:l_image ('build/img/tatoine.jpg')">
+              <img src="build/img/tatoine.jpg" alt="">
+            </a>
+          </div>
+          <div class="small-image-item">
+            <a href="javascript:l_image ('build/img/hoth.jpg')">
+              <img src="build/img/hoth.jpg" alt="">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Правая часть, с поиском, списком и меню, она делится на две части, верхнюю и нижнюю -->
+    <div class="right">
+      <!-- Верхняя часть, делится на поиск и на иконку аватара, скорей всего раздел профиля пользователя -->
+      <div class="top">
+        <div class="search-field">
+          <div class="top">
+            <input type="text" placeholder="Поиск объектов на карте...">
+            <a href="#"><img src="build/img/search-icon.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="top">
+            <a href="profile.html">
+              <img src="build/img/avatar.jpg" alt="" class="avatar">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Нижняя часть, делится на список и меню -->
+      <div class="info">
+        <div class="information">
+
+          <h2>KP09, пр-кт Юности, 1а (универмаг Юность), A </h2>
+          <p class="information-price">15000 руб./мес.</p>
+          <p class="construction-data">Данные конструкции: </p>
+          <ul class="description-list">
+            <li>Тип конструкции:</li>
+            <li>Биллборд</li>
+          </ul>
+          <ul class="description-list">
+            <li>Формат:</li>
+            <li>6 х 3 м</li>
+          </ul>
+          <ul class="description-list">
+            <li>Направление:</li>
+            <li></li>
+          </ul>
+          <ul class="description-list">
+            <li>Освещение:</li>
+            <li>Да</li>
+          </ul>
+          <ul class="description-list">
+            <li>GID:</li>
+            <li>КР109</li>
+          </ul>
+          <ul class="description-list">
+            <li>Технические требования:</li>
+            <li></li>
+          </ul>
+
+          <button class="download-button">Скачать</button>
+
+          <p class="busy-title">Занятость:</p>
+          <ul class="busy-list">
+            <li class="free-item">Свободно: 219</li>
+            <li class="busy-item">Занят: 12</li>
+            <li class="reserved-item">Резерв: 43</li>
+          </ul>
+
+          <div class="months-indicators">
+            <ul>
+              <li class="indicator-reserved">Янв</li>
+              <li class="indicator-reserved">Фев</li>
+              <li class="indicator-reserved">Мар</li>
+              <li class="indicator-free">Апр</li>
+              <li class="indicator-free">Май</li>
+              <li class="indicator-free">Июн</li>
+              <li class="indicator-free">Июл</li>
+              <li class="indicator-free">Авг</li>
+              <li class="indicator-free">Сен</li>
+              <li class="indicator-free">Окт</li>
+              <li class="indicator-free">Ноя</li>
+              <li class="indicator-free">Дек</li>
+            </ul>
+          </div>
+
+          <button class="pdf-add">Добавить в PDF КП</button>
+
+        </div>
+        <!-- Раздел меню -->
+        <div class="menu">
+          <nav>
+            <ul>
+              <li class="notification-item">
+                <a href="notification.html" class="menu-item">
+                  <img src="build/img/notification.svg" alt="">
+                  <span class="notification-indicator"></span>
+                </a>
+              </li>
+              <li class="map-item">
+                <a href="index.html" class="">
+                  <img src="build/img/map.svg" alt="">
+                </a>
+              </li>
+              <li class="filter-item">
+                <a href="filter.html" class="">
+                  <img src="build/img/filter.svg" alt="">
+                </a>
+              </li>
+              <li class="pdf-item">
+                <a href="pdf.html" class="menu-item">
+                  <img src="build/img/pdf.svg" alt="">
+                </a>
+              </li>
+              <li class="dot-item">
+                <a href="dot.html" class="avatar-link">
+                  <img src="build/img/stand-avatar.png" alt="" class="avatar">
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="build/js/script.js"></script>
+  <script>
+    function l_image(a) {
+      document.largeIMG.src = a
+    }
+
+  </script>
+  <script>
+      $('.filter-item').click(function (event) {
+        event.preventDefault();
+        $('.filter').addClass('filter-show');
+        $('.list').addClass('filter-shadow');
+      });
+
+    </script>
+</body>
+
+</html>
